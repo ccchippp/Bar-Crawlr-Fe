@@ -1,7 +1,7 @@
 
 import React from "react";
 import './App.css';
-import Container from './Container';
+// import Container from './Container';
 import Bootstrap from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import GoogleApiWrapper from './GoogleApiWrapper';
@@ -11,13 +11,13 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-      <Container md/>
         <Nav />
+      {/* <Container md/> */}
       </header>
       <div>
       </div>
       <div className='ApiWrapper'>
-        <GoogleApiWrapper />
+        {/* <GoogleApiWrapper /> */}
       </div>
     </div>
   );
