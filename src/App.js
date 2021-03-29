@@ -5,18 +5,21 @@ import Container from './Container';
 import Bootstrap from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import GoogleApiWrapper from './GoogleApiWrapper';
+import Nav from './Nav'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <Container md/>
+      <header className="header">
+      <Container md/>
+        <Nav />
       </header>
-      <div >
+      <div>
+      </div>
+      <div className='ApiWrapper'>
         <GoogleApiWrapper />
       </div>
     </div>
-
   );
 }
 
