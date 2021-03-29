@@ -2,8 +2,8 @@
 import React from "react";
 import './App.css';
 import Container from './Container';
-import Bootstrap from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import bootstrap from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import GoogleApiWrapper from './GoogleApiWrapper';
 
 function App() {
