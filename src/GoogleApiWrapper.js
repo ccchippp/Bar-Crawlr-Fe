@@ -12,14 +12,17 @@ class MapContainer extends Component {
     return (
       <Map
         google={this.props.google}
+        // onReady={this.fetchPlaces}
         zoom={14}
         style={containerStyle}
-        initialCenter={
-          {
+        initialCenter={{
             lat: 38.9072,
             lng: -77.0369
-          }
-        }
+          }}
+        // center={{
+        //   lat: 40.854885,
+        //   lng: -88.081807
+        // }}
       />
     );
   }

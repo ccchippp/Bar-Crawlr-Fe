@@ -12,6 +12,15 @@ import Nav from './Nav'
 //   bars: []
 // }
 
+// componentDidMount(){
+//   fetch('URL')
+//   .then(r => r.json())
+//   .then(data => 
+// this.setState({
+//   location: ,
+//   bars: 
+// })
+// )}
 
 
 function App() {
@@ -22,13 +31,10 @@ function App() {
       {/* <Container md/> */}
       </header>
       <body>
-        <div className='ApiWrapper'>
-         <GoogleApiWrapper />
+        <div className='MainContainer'>
+          <MainContainer />
         </div>
-        <div>
-        <MainContainer />
-        </div>
-        </body>
+      </body>
 
       
     </div>

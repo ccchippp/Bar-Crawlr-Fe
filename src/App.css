@@ -78,3 +78,20 @@
   text-align: center;
 }
 
+
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+
+.MainContainer {
+  grid-column: 1 / 1;
+}
+.GoogleApiWrapper {
+  grid-column: 2 / 2;
+}
+
+.ResCollection {
+  width: 500px;
+}
