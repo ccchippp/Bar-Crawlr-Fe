@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import CurrentLocation from './Map';
 
 
-const containerStyle = {
-  position: 'relative',  
-  width: '600px',
-  height: '600px'
-}
+// const containerStyle = {
+//   position: 'relative',  
+//   width: '600px',
+//   height: '600px'
+// }
 
 export class MapContainer extends Component {
   
@@ -38,7 +39,7 @@ onClose = props => {
         google={this.props.google}
         // onReady={this.fetchPlaces}
         zoom={14}
-        style={containerStyle}
+        // style={containerStyle}
         initialCenter={{
             lat: 38.9072,
             lng: -77.0369
@@ -48,9 +49,14 @@ onClose = props => {
         //   lng: -88.081807
         // }}
       >
+        <CurrentLocation
+        centerAroundCurrentLocation
+        google={this.props.google}
+        >
+
         <Marker
           onClick={this.onMarkerClick}
-          name={'El Centro'}
+          name={'Current Location'}
         />
         <InfoWindow
           marker={this.state.activeMarker}
@@ -61,6 +67,7 @@ onClose = props => {
             <h4>{this.state.selectedPlace.name}</h4>
           </div>
         </InfoWindow>
+        </CurrentLocation>
       </Map>
     );
   }
