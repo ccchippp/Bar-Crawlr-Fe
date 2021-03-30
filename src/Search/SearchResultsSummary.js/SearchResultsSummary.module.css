@@ -1,0 +1,13 @@
+.search-summary {
+    background: rgb(245, 245, 245);
+    padding: 2rem;
+    max-width: 1100px;
+    width: 100%
+}
+
+.container {
+    background: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+
+}
