@@ -7,6 +7,13 @@ import Bootstrap from 'react-bootstrap';
 import GoogleApiWrapper from './GoogleApiWrapper';
 import Nav from './Nav'
 
+// state = {
+//   location: 'Washington D.C.',
+//   bars: []
+// }
+
+
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +24,7 @@ function App() {
       <div>
       </div>
       <div className='ApiWrapper'>
-        {/* <GoogleApiWrapper /> */}
+        <GoogleApiWrapper />
       </div>
     </div>
   );

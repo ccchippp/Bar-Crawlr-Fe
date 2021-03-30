@@ -14,39 +14,54 @@
   width: 100%;
   background-color: #f8a127;
   max-height: 75px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
   color: white;
   z-index: 999;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 .space-below-header{
   padding-bottom: 120px;
 }
 
 .prof-pic-container{
-  grid-column: 1 / 2;
+  grid-column: 1 / 1;
   justify-content: right;
 }
 
-.navbar-brand-container {
-  all: unset;
+#bar-search {
+  grid-column: 3 / 4;
+  align-items: center;
+  text-align: center;
+
+}
+.center-form {
+  grid-column: 3 / 5;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+.navbar-brand {
   grid-column: 2 / 3;
-  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-weight: 900;
+  font-size: larger;
 }
 
-.logout-container {
-  grid-column: 4 / 5;
+.logout {
+  grid-column: 5 / 5;
   font-weight: bold;
   background: transparent;
   letter-spacing: 1.75px;
   color: white;
   font-size: 1.5rem;
   padding: 1rem 2rem;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  border: 
 }
 
 .App-link {
