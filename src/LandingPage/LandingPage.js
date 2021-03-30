@@ -5,9 +5,12 @@ import styles from './LandingPage.module.css'
 
 export function LandingPage() {
     return (
-        <div>
+        <div className={styles['landing']}>
+        <div className={styles['search-area']}> 
             <TopNav/>
             <SearchBar/>
         </div>
+        </div>
+
     )
 }

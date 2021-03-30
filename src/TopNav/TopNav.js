@@ -6,7 +6,7 @@ export function TopNav() {
         <div className={styles['top-nav']}>
             <div className={styles['left']}>
                 <image></image>
-                <h4>Bar Crawlr</h4>
+                <h2>Bar Crawlr</h2>
             </div>
            
             <div className={styles['right']}>
