@@ -1,37 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './SearchBar.module.css'
 
 export function SearchBar(props) {
+
+     const [term, setTerm] = useState(props.term || '')
+     const [location, setLocation] = useState(props.location || '')
+
      const sizeClass = props.small ? '' : 'is-medium'
-    return (
+
+     function submit(e) {
+          e.preventDefault()
+          console.log(term, location)
+     }
+     
+     return (
+     <form onSubmit={submit}>
         <div className="field has-addons search-bar">
-       <p className='control'>
-            <button className={`button is-static ${sizeClass}`}>Search</button>
-       </p>
-       <p className='control'>
-            <input className={`input ${sizeClass} ${styles['input-control']}`} type="text" placeholder="Start Crawling" />
-       </p>
-       <p className='control'>
-            <button className={`button is-static ${sizeClass}`}>NEAR</button>
-       </p>
-       <p className='control'>
-            <input className={`input ${sizeClass} ${styles['input-control']}`} type="text" placeholder="Where are you" />
-       </p>
-       <div className={`button is-medium ${styles['search-button']}`}>
-           <span className='icon'>
-            <i className="fas fa-search"></i>
-           </span>
-       </div>
+          <div className='control'>
+               <div className={`button is-static ${sizeClass}`}>Search</div>
+          </div>
+          <p className='control'>
+               <input className={`input ${sizeClass} ${styles['input-control']}`} 
+                    onChange={(e) => setTerm(e.target.value)}
+                    type="text" 
+                    placeholder="Start Crawling"
+               />
+          </p>
+          <div className='control'>
+               <div className={`button is-static ${sizeClass}`}>NEAR</div>
+          </div>
+          <p className='control'>
+               <input className={`input ${sizeClass} ${styles['input-control']}`} 
+                    onChange={(e) => setLocation(e.target.value)}
+                    type="text" 
+                    placeholder="Where are you"
+               />
+          </p>
+          <div className={`button is-medium ${styles['search-button']}`} 
+               onClick={submit}>
+                    <span className='icon'>
+                         <i className="fas fa-search"></i>
+                    </span>
+          </div>
         </div>
-        // <div class="field has-addons">
-        //     <div class="control">
-        //         <input class="input" type="text" placeholder="Find a repository" />
-        // </div>
-        // <div class="control">
-        //     <a class="button is-info">
-        //         Start your Crawl
-        //      </a>
-        // </div>
-        // </div>
+     </form>
     )
 }

@@ -1,3 +1,17 @@
 .search-result {
     display: flex;
 }
+
+.bar-image {
+    width: 210px;
+    height: 210px;
+    margin-right: 1rem;
+} 
+
+.bar-info {
+    min-width: 200px;
+}
+
+.contact-info {
+    font-size: 1rem; 
+}
