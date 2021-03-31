@@ -11,6 +11,7 @@ export function NavBar(props) {
             <SearchBar small
                  term={props.term} 
                 location={props.location}
+                search={props.search}
             />
             <button className={`button ${styles['nav-button logout']}`}>Log Out</button>
         </div>

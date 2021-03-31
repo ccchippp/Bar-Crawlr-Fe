@@ -15,12 +15,15 @@ export function LandingPage() {
 
 
     return (
+        <div>
+            <TopNav/>
+
         <div className={styles['landing']}>
         <div className={styles['search-area']}> 
-            <TopNav/>
             <SearchBar 
             search={search}
             />
+        </div>
         </div>
         </div>
 

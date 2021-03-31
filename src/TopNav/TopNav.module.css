@@ -2,12 +2,32 @@
     --element-spacing: 1.5rem;
 }
 
+.title {
+    padding-left: 25px;
+    font-size: 24pt;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.right-button {
+    background: transparent;
+    border: whitesmoke;
+    color: whitesmoke;
+    font-size: 16pt;
+    font-weight: 900;
+    padding-right: 25px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
 .top-nav {
-    /* background-color: teal; */
+    background-color: teal;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: var(--element-spacing);
+    padding-bottom: 25px;
+    /* margin: var(--element-spacing); */
+    color: whitesmoke;
 }
 
 .left > * {

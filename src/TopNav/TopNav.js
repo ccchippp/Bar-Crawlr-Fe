@@ -6,11 +6,11 @@ export function TopNav() {
         <div className={styles['top-nav']}>
             <div className={styles['left']}>
                 <image></image>
-                <h2>Bar Crawlr</h2>
+                <h2 className={styles['title']} >Bar Crawlr</h2>
             </div>
            
             <div className={styles['right']}>
-                <button className='logout'>logout</button>
+                <button className={`logout ${styles['right-button']}`}>Log Out</button>
             </div>
             
         </div>

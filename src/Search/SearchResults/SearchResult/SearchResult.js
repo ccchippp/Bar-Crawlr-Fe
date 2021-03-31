@@ -24,16 +24,19 @@ export function SearchResult(props) {
             className={styles['bar-image']}>
             </img>
             <div className={styles['bar-info']}>
-                <h2 className='subtitle'>
-                    {b.name}
+                <h2 className=''>
+                    {b.name}  {b.price}
                 </h2>
-                <p> {b.price} {tags} </p>
+                <p> {tags} </p>
+                <p className={`is-size-6 ${styles['words']}`}> Transportation options:</p>
+                <p className={`is-size-7 ${styles['transportation']}`}  >Car: 2   Transit: 12    Bike: 4    Walk: 15</p>
             </div>
-            <div className={styles['contact-info']}>
-            <p>{b.phone}</p>
-            <p>{b.location.address1}</p>
-            <p>{b.location.city}, {b.location.state}</p>
-            <p>{b.location.zip_code}</p>
+            <div>
+            <p  className={'is-size-6'} >{b.phone}</p>
+            <p  className={`is-size-6 ${styles['contact-info']}`} >{b.location.address1}</p>
+            <p  className={`is-size-6 ${styles['contact-info']}`} >{b.location.city}, {b.location.state}</p>
+            <p  className={`is-size-6 ${styles['contact-info']}`} >{b.location.zip_code}</p>
+
             </div>
         </div>
     )

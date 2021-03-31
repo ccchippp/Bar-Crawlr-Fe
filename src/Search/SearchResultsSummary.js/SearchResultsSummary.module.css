@@ -1,6 +1,7 @@
 .search-summary {
     background: rgb(245, 245, 245);
     padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     max-width: 1100px;
     width: 100%;
     display: flex;
@@ -12,4 +13,8 @@
     display: flex;
     justify-content: center;
 
+}
+
+.uppercase {
+    text-transform: capitalize;
 }

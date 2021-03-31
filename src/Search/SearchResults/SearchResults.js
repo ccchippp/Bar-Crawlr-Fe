@@ -1,6 +1,9 @@
 import React from 'react';
 import { SearchResult } from './SearchResult/SearchResult';
+import { MapData } from '../Map/MapData';
 import styles from './SearchResults.module.css'
+
+
 
 export function SearchResults(props) {
 
@@ -15,8 +18,13 @@ export function SearchResults(props) {
                 />)
 
     return(
-        <div className={styles['search-results']}>
-            {SearchResults}
+        <div>
+            <div className={styles['search-results']}>
+                {SearchResults}
+            </div>
+            <div>
+                <MapData businesses={props.businesses}/>
+            </div>
         </div>
     )
 }

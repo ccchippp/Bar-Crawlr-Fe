@@ -18,10 +18,10 @@ export function SearchBar(props) {
      return (
      <form onSubmit={submit}>
         <div className="field has-addons search-bar">
-          <div className='control'>
+          <div className={`control ${styles['search-field']}`}>
                <div className={`button is-static ${sizeClass}`}>Search</div>
           </div>
-          <p className='control'>
+          <p className={`control ${styles['search-field']}`}>
                <input className={`input ${sizeClass} ${styles['input-control']}`} 
                     onChange={(e) => setTerm(e.target.value)}
                     type="text"
@@ -29,10 +29,10 @@ export function SearchBar(props) {
                     placeholder="Start Crawling"
                />
           </p>
-          <div className='control'>
+          <div className={`control ${styles['search-field']}`}>
                <div className={`button is-static ${sizeClass}`}>NEAR</div>
           </div>
-          <p className='control'>
+          <p className={`control ${styles['search-field']}`}>
                <input className={`input ${sizeClass} ${styles['input-control']}`} 
                     onChange={(e) => setLocation(e.target.value)}
                     type="text"

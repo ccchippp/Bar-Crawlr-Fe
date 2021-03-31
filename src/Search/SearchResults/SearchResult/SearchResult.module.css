@@ -1,5 +1,6 @@
 .search-result {
     display: flex;
+    margin-left: 2rem;
 }
 
 .bar-image {
@@ -13,5 +14,14 @@
 }
 
 .contact-info {
-    font-size: 1rem; 
+    font-size: 1rem;
+    padding-top: 8px;
+}
+
+.transportation {
+    margin-top: 10px;
+}
+
+.words {
+    margin-top: 10px;
 }
