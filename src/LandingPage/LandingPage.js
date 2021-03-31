@@ -10,7 +10,7 @@ export function LandingPage() {
     function search(term, location) {
         const urlEncodedTerm = encodeURI(term)
         const urlEncodedLocation= encodeURI(location)
-        history.push(`/search?find_desc=${urlEncodedTerm}&find_loc${urlEncodedLocation}`)
+        history.push(`/search?find_desc=${urlEncodedTerm}&find_loc=${urlEncodedLocation}`)
     }
 
 

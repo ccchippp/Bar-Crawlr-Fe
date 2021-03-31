@@ -1,32 +1,39 @@
 import React from 'react'
 import styles from './SearchResult.module.css'
 
-export function SearchResult() {
+export function SearchResult(props) {
+    const b = props.business
+    if (!b) {
+        return(<div/>)
+    }
+
+    const tags = b.categories.map
+    (category => (<span 
+        className='tag' 
+        key={b.id + category.title}>
+            {category.title}
+        </span>))
+
+    // const address = b.location.map(addressLine => <p key={b.id + addressLine}>{addressLine}</p>)
+
     return(
         <div className={styles['search-result']}>
             <img
-            src='http://placehold.jp/210x210.png'
+            src={b.image_url}
             alt='business image'
             className={styles['bar-image']}>
             </img>
             <div className={styles['bar-info']}>
                 <h2 className='subtitle'>
-                    Bar Name
+                    {b.name}
                 </h2>
-                <p>$$ 
-                    <span 
-                        className='tag'>
-                            Drinks
-                    </span> <span 
-                        className='tag'>
-                            Burgers
-                    </span>
-                </p>
+                <p> {b.price} {tags} </p>
             </div>
             <div className={styles['contact-info']}>
-            <p>(202)310-8963</p>
-            <p>Example St.</p>
-            <p>Washington D.C. 20002</p>
+            <p>{b.phone}</p>
+            <p>{b.location.address1}</p>
+            <p>{b.location.city}, {b.location.state}</p>
+            <p>{b.location.zip_code}</p>
             </div>
         </div>
     )
