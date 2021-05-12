@@ -14,8 +14,6 @@ export function SearchResult(props) {
             {category.title}
         </span>))
 
-    // const address = b.location.map(addressLine => <p key={b.id + addressLine}>{addressLine}</p>)
-
     return(
         <div className={styles['search-result']}>
             <img

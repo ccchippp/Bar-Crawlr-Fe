@@ -4,9 +4,6 @@ import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 export class MapContainer extends Component {
   render() {
 
-    // var name = this.props.businesses.map
-    // (b => b.name)
-
     var singleLat = this.props.lat.map
     (latCoords => latCoords)
 
@@ -54,82 +51,9 @@ const markers = this.props.businesses.map
             initialCenter={{
                 lat: singleLat[0],
                 lng: singleLong[0]
-            }}
-            >
-                {markers}
-        
-        {/* <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[0]}
-                position={points[0]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[1]}
-                position={points[1]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[2]}
-                position={points[2]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[3]}
-                position={points[3]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[4]}
-                position={points[4]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[5]}
-                position={points[5]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[6]}
-                position={points[6]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[7]}
-                position={points[7]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[8]}
-                position={points[8]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[9]}
-                position={points[9]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[10]}
-                position={points[10]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[11]}
-                position={points[11]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[12]}
-                position={points[12]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[13]}
-                position={points[13]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[14]}
-                position={points[14]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[15]}
-                position={points[15]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[16]}
-                position={points[16]}/>
-        <Marker
-                title={'The marker`s title will appear as a tooltip.'}
-                name={name[17]}
-                position={points[17]}/> */}
+            }}>
+      
+      {markers}
         
       </Map>
     );
@@ -137,16 +61,5 @@ const markers = this.props.businesses.map
 }
  
 export default GoogleApiWrapper({
-  apiKey: ''
+  apiKey: 'AIzaSyCeI787lI4KYtUR_hYgEg_LP_lR8bUAf38'
 })(MapContainer)
-
-
-
-
-// var points = [
-//     { lat: 42.02, lng: -77.01 },
-//     { lat: 42.03, lng: -77.02 },
-//     { lat: 41.03, lng: -77.04 },
-//     { lat: 42.05, lng: -77.02 }
-// ]
-
