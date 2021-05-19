@@ -18,7 +18,7 @@ export function SearchResult(props) {
         <div className={styles['search-result']}>
             <img
             src={b.image_url}
-            alt='business image'
+            alt='business'
             className={styles['bar-image']}>
             </img>
             <div className={styles['bar-info']}>
